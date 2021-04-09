@@ -1,0 +1,26 @@
+﻿  main.cpp
+  mesh_factories.cpp
+  renderers.cpp
+  simplex_noise.cpp
+  Generating Code...
+     Creating library C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\cppp minecraft thomas thing.lib and object C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\cppp minecraft thomas thing.exp
+Tundra Engine.lib(asset_loader.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(asset_loader.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(camera.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(camera.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(color.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(color.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(debug.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(debug.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(events_state.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(events_state.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(fbo.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(fbo.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(game_object.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(game_object.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(game_time.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(game_time.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(input.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(input.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(mesh.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(mesh.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(rendering.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(rendering.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(shader.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(shader.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(shader_generator.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(shader_generator.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(texture.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(texture.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(text_loader.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(text_loader.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(transform.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(transform.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(ui.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(ui.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(updateable.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(updateable.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+Tundra Engine.lib(window.obj) : warning LNK4099: PDB 'Tundra Engine.pdb' was not found with 'Tundra Engine.lib(window.obj)' or at 'C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\Tundra Engine.pdb'; linking object as if no debug info
+  cppp minecraft thomas thing.vcxproj -> C:\Users\Zach\source\repos\cppp minecraft thomas thing\x64\Debug\cppp minecraft thomas thing.exe

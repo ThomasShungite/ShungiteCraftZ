@@ -1,6 +1,6 @@
 #include "entity_construction.h"
 
-#include <asset_loader.h>
+#include <Tundra/asset_loader.h>
 
 Disjointable::Disjointable(double radius, float subHealth) :
 	Attackable(radius, subHealth, false)

@@ -51,6 +51,8 @@ ItemStack& ItemStack::operator=(const ItemStack& other)
 	item = other.item;
 	// TODO: New instance data! (copy!)
 	quantity = other.quantity;
+
+	return *this;
 }
 
 ItemStack& ItemStack::operator=(ItemStack&& other)
@@ -61,6 +63,8 @@ ItemStack& ItemStack::operator=(ItemStack&& other)
 
 	other.item = nullptr;
 	other.instanceData = nullptr;
+
+	return *this;
 }
 
 Item::Item(const std::string& idName, const std::string& texture, bool isStackable, EquipmentSlot compatibleSlot) :

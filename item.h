@@ -22,8 +22,8 @@ public:
 	ItemStack(Item* item, quantity_t quantity);
 	~ItemStack();
 
-	ItemStack& operator=(const ItemStack& other) override;
-	ItemStack& operator=(ItemStack&& other) override;
+	ItemStack& operator=(const ItemStack& other);
+	ItemStack& operator=(ItemStack&& other);
 };
 
 class Item

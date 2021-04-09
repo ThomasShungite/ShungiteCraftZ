@@ -12,6 +12,7 @@
 #include "entity.h"
 #include "entity_construction.h"
 #include "item.h"
+#include "simplex_noise.h"
 
 class ArrayUIContainer : public Component2
 {
@@ -251,12 +252,13 @@ int main(int argc, char** argv)
 	crosshair->AddComponent<RenderComponent2>("white", FColor(1.0F, 1.0F, 1.0F, 0.5F));
 	crosshair->Enable();
 
+	OpenSimplexNoise generator;
 	GameObject3* testChunkObj = Instantiate<GameObject3>(Transform3());
 	Chunk* testChunk = testChunkObj->AddComponent<Chunk>();
 	for (int z = 0; z < Chunk::CHUNK_SIZE; ++z)
 		for (int x = 0; x < Chunk::CHUNK_SIZE; ++x)
 		{
-			int surfaceHeight = 3;
+			int surfaceHeight = (generator.Evaluate(x / 2.0, z / 2.0) + 1) * 2;
 			for (int y = 0; y <= surfaceHeight; ++y)
 			{
 				if (y == surfaceHeight)

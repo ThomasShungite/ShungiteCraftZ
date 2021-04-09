@@ -5,7 +5,7 @@
 class InstanceData
 {
 private:
-	struct Data
+	/*struct Data
 	{
 		char* data;
 		size_t size;
@@ -16,9 +16,9 @@ private:
 		~Data();
 	};
 
-	std::unordered_map<std::string, Data> data;
+	std::unordered_map<std::string, Data> data;*/
 public:
-	InstanceData();
+	InstanceData() {}
 
 	template<typename T>
 	void Add(const std::string& name, T initial, size_t count = 1)

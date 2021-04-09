@@ -1,9 +1,9 @@
-#include <window.h>
-#include <events_state.h>
-#include <input.h>
-#include <ui.h>
-#include <rendering.h>
-#include <pbr.h>
+#include <Tundra Engine/window.h>
+#include <Tundra Engine/events_state.h>
+#include <Tundra Engine/input.h>
+#include <Tundra Engine/ui.h>
+#include <Tundra Engine/rendering.h>
+#include <Tundra Engine/pbr.h>
 
 #include "block.h"
 #include "chunk.h"
@@ -11,6 +11,7 @@
 #include "mesh_factories.h"
 #include "entity.h"
 #include "entity_construction.h"
+#include "item.h"
 
 class ArrayUIContainer : public Component2
 {
@@ -208,6 +209,8 @@ int main(int argc, char** argv)
 	register_block(Block("ganja", 1.0F));
 	register_block(Block("cobblestone", 4.0F));
 
+	register_item(Item("tuft", "Items/tuft", true, Item::EquipmentSlot::NONE));
+
 	// Green Zombie
 	{
 		GameObject3* zombie = Instantiate<GameObject3>(Transform3());
@@ -338,6 +341,7 @@ int main(int argc, char** argv)
 	}
 
 	Block::FlushAll(false);
+	Item::FlushAll();
 
 	// Engine Destructor
 	Scene::Clear<Transform3>();

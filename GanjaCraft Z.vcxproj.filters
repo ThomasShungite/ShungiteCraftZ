@@ -43,6 +43,9 @@
     <ClCompile Include="instance_data.cpp">
       <Filter>Shared</Filter>
     </ClCompile>
+    <ClCompile Include="item_ui.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk.h">
@@ -71,6 +74,9 @@
     </ClInclude>
     <ClInclude Include="instance_data.h">
       <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="item_ui.h">
+      <Filter>Items</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

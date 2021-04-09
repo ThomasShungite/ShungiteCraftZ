@@ -19,6 +19,9 @@ unsigned __int16 Block::Get(const std::string& idName)
 
 void Block::Register(Block* block)
 {
+	if (blockMap.find(block->idName) != blockMap.end())
+		Console::Error("Error: " + block->idName + " is overriding an existing block");
+
 	blocks.push_back(block);
 	blockMap[block->idName] = static_cast<unsigned __int16>(blocks.size() - 1);
 

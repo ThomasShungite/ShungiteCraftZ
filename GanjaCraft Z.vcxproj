@@ -99,7 +99,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\thoma\Desktop\Libs\C++\include;C:\Users\thoma\source\repos\Tundra Engine\Tundra Engine\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\thoma\Desktop\Libs\C++\include;C:\Users\thoma\source\repos\Tundra Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,7 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\thoma\Desktop\Libs\C++\include;C:\Users\thoma\source\repos\Tundra Engine\Tundra Engine\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\thoma\Desktop\Libs\C++\include;C:\Users\thoma\source\repos\Tundra Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +150,7 @@
     <ClCompile Include="entity_construction.cpp" />
     <ClCompile Include="instance_data.cpp" />
     <ClCompile Include="item.cpp" />
+    <ClCompile Include="item_ui.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mesh_factories.cpp" />
     <ClCompile Include="renderers.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="entity_construction.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="item_ui.h" />
     <ClInclude Include="mesh_factories.h" />
     <ClInclude Include="renderers.h" />
     <ClInclude Include="instance_data.h" />

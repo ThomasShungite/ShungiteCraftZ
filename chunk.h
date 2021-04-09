@@ -1,6 +1,10 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "Tundra/engine.h"
+=======
+#include <Tundra Engine/engine.h>
+>>>>>>> 5b0936d6229b368f972e8754f7e8a06d3f81b96c
 
 #include <vector>
 

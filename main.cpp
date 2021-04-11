@@ -12,6 +12,7 @@
 #include "entity.h"
 #include "entity_construction.h"
 #include "item.h"
+#include "item_ui.h"
 #include "simplex_noise.h"
 
 class ArrayUIContainer : public Component2
@@ -61,23 +62,34 @@ public:
 class Controller : public UpdateableComponent3
 {
 private:
+	const int hotbarSlots;
+
 	double currentSpeed;
 	const double adjustmentConstant;
 	float pitch;
 	float yaw;
+
+	InteractableItemSlot2D** hotbar;
 public:
 	Controller(double speed, double adjustmentConstant) :
 		currentSpeed(speed),
 		adjustmentConstant(adjustmentConstant),
 		pitch(0.0F),
-		yaw(0.0F)
-	{ }
+		yaw(0.0F),
+		hotbarSlots(12)
+	{
+		hotbar = new InteractableItemSlot2D*[hotbarSlots];
+	}
+
+	~Controller()
+	{
+		delete[] hotbar;
+	}
 
 	void OnCreate() override
 	{
 		float gap = 2.0F;
 		float slotSize = 64.0F;
-		int hotbarSlots = 12;
 		{
 			GameObject2* hotbar = Instantiate<GameObject2>(Transform2(nullptr, pos_constraint(LesserEdgePosConstraint(gap)), scale_constraint(CenterScaleConstraint(gap + (slotSize + gap) * hotbarSlots)), scale_constraint(CenterScaleConstraint(slotSize + gap * 2))));
 			//hotbar->AddComponent<ArrayUIContainer>();
@@ -85,10 +97,14 @@ public:
 			{
 				GameObject2* slot = Instantiate<GameObject2>(Transform2(pos_constraint(LesserEdgePosConstraint(gap + (slotSize + gap) * x)), nullptr, scale_constraint(CenterScaleConstraint(slotSize)), scale_constraint(AspectRatioScaleConstraint(1.0F))));
 				slot->AddComponent<RenderComponent2>("UI/slot");
+				this->hotbar[x] = slot->AddComponent<InteractableItemSlot2D>(Item::EquipmentSlot::NONE);
 				slot->SetParent(*hotbar);
 			}
 			hotbar->Enable();
 		}
+
+		ItemStack stack(Item::Get("tuft"), 12);
+		hotbar[0]->Set(std::move(stack));
 	}
 
 	void Update(const GameTime& time) override
@@ -176,7 +192,7 @@ int main(int argc, char** argv)
 	Window window("GanjaCraft Z");
 
 	Internal::Rendering::Init(1450, 790);
-	Internal::GameObjects2::Init(1024);
+	Internal::GameObjects2::Init(1024, true);
 	//Internal::PBR::Init();
 
 	glDisable(GL_MULTISAMPLE);

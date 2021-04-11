@@ -10,6 +10,7 @@ class Item;
 class ItemStack
 {
 public:
+	// DO NOT modify directly from the outside (unless it is data in instanceData)!
 	Item* item;
 	InstanceData* instanceData;
 	quantity_t quantity; // Durability if the item is not stackable
@@ -24,6 +25,10 @@ public:
 
 	ItemStack& operator=(const ItemStack& other);
 	ItemStack& operator=(ItemStack&& other);
+
+	// Unsafe if the amount is nonsensical
+	void Increment(quantity_t quantity);
+	void Decrement(quantity_t quantity);
 };
 
 class Item
@@ -72,6 +77,8 @@ public:
 	virtual void OnSecondaryBindingPress(const ItemStack& stack);
 	virtual void OnSecondaryBindingHold(const ItemStack& stack);
 	virtual void OnSecondaryBindingRelease(const ItemStack& stack);
+
+	virtual GameObject2* Create2DDisplay(const ItemStack& stack, GameObject2** storage);
 
 	static Item* Get(const std::string& idName);
 	static void Register(Item* item);

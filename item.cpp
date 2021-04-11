@@ -1,5 +1,7 @@
 #include "item.h"
 
+#include "item_ui.h"
+
 std::unordered_map<std::string, Item*> Item::itemMap;
 
 ItemStack::ItemStack() :
@@ -67,6 +69,23 @@ ItemStack& ItemStack::operator=(ItemStack&& other)
 	return *this;
 }
 
+void ItemStack::Increment(quantity_t quantity)
+{
+	this->quantity += quantity;
+}
+
+void ItemStack::Decrement(quantity_t quantity)
+{
+	this->quantity -= quantity;
+	if (quantity == 0)
+	{
+		item = nullptr;
+		if (instanceData != nullptr)
+			delete instanceData;
+		instanceData = nullptr;
+	}
+}
+
 Item::Item(const std::string& idName, const std::string& texture, bool isStackable, EquipmentSlot compatibleSlot) :
 	idName(idName),
 	texture(texture),
@@ -101,6 +120,14 @@ void Item::OnPrimaryBindingRelease(const ItemStack& stack) { }
 void Item::OnSecondaryBindingPress(const ItemStack& stack) { }
 void Item::OnSecondaryBindingHold(const ItemStack& stack) { }
 void Item::OnSecondaryBindingRelease(const ItemStack& stack) { }
+
+GameObject2* Item::Create2DDisplay(const ItemStack& stack, GameObject2** storage)
+{
+	GameObject2* obj = Instantiate<GameObject2>(Transform2());
+	obj->AddComponent<RenderComponent2>(texture);
+
+	return obj;
+}
 
 Item* Item::Get(const std::string& idName)
 {
